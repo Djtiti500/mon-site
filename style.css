@@ -1,0 +1,49 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.page-transition {
+    position: fixed; /* Pour qu'il couvre toute la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    z-index: 1000; /* S'assurer que le fond soit bien au-dessus du reste du contenu */
+    pointer-events: none; /* Permet de cliquer à travers cette couche */
+    transition: opacity 1s ease-in-out;
+}
+
+.page-transition.active {
+    opacity: 1;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
